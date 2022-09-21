@@ -2,7 +2,7 @@ version: '3'
 
 services:
     elasticsearch:
-      image: cmbaas/elasticsearch:v7.3.2
+      image: elasticsearch:v7.3.2
       container_name: elasticsearch
       hostname: elasticsearch
       environment:
@@ -14,7 +14,7 @@ services:
         - ./configmap/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
         - ./data-dir/elasticsearch:/usr/share/elasticsearch/data
     kibana:
-      image: cmbaas/kibana:7.3.2
+      image: kibana:7.3.2
       container_name: kibana
       hostname: kibana
       links:
